@@ -1,3 +1,5 @@
+const { logError } = require("./log");
+
 const shuffle = (arr) => {
     let i = arr.length;
     while (i) {
@@ -91,12 +93,12 @@ module.exports = async function createCaptcha(length = 6, blacklist = "") {
     const { Canvas } = require("canvas");
 
     // Validate length param
-    if (Number.isNaN(length)) throw new Error("Discord.js Captcha Generation Error: Length must be a Number.");
-    if (length < 1) throw new Error("Discord.js Captcha Generation Error: The CAPTCHA Length must be at least 1 character.\nNeed Help? Join our Discord Server at 'https://discord.gg/P2g24jp'");
+    if (Number.isNaN(length)) logError("Length must be a Number.");
+    if (length < 1) logError("The CAPTCHA Length must be at least 1 character.");
 
     // Validate blacklist param
-    if (typeof blacklist !== "string") throw new Error("Discord.js Captcha Generation Error: The blacklist parameter must be a string.\nNeed Help? Join our Discord Server at 'https://discord.gg/P2g24jp'");
-    if (blacklist.match(/[^a-zA-Z0-9]/)) throw new Error("Discord.js Captcha Generation Error: The blacklist parameter must only contain alphanumeric characters.\nNeed Help? Join our Discord Server at 'https://discord.gg/P2g24jp'");
+    if (typeof blacklist !== "string") logError("The blacklist parameter must be a string.");
+    if (blacklist.match(/[^a-zA-Z0-9]/)) logError("The blacklist parameter must only contain alphanumeric characters.");
 
     // Remove blacklisted characters from the character list
     chars.splice(0, chars.length, ...chars.filter(c => !blacklist.includes(c)));

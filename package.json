@@ -1,7 +1,7 @@
 {
   "name": "discord.js-captcha",
-  "version": "3.0.9",
-  "description": "A powerful package for Discord.js v14 that allows you to easily create CAPTCHAs for Discord Servers.",
+  "version": "3.0.10",
+  "description": "A powerful package for Discord.js v14 that allows you to easily create CAPTCHAs for Discord servers.",
   "main": "src/index.js",
   "funding": {
     "type": "buymeacoffee",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/WillTDA/Discord.js-Captcha"
+    "url": "https://github.com/diamonddigitaldev/Discord.js-Captcha"
   },
   "keywords": [
     "discord.js",

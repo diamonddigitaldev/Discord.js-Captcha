@@ -2,7 +2,7 @@
     🎓 Discord.js Captcha 🎓
 </h1>
 
-<center style="margin-bottom:1rem;">A powerful package for Discord.js v14 that allows you to easily create CAPTCHAs for Discord Servers.</center>
+<center style="margin-bottom:1rem;">A powerful package for Discord.js v14 that allows you to easily create CAPTCHAs for Discord servers.</center>
 
 [![NPM](https://nodei.co/npm/discord.js-captcha.png)](https://npmjs.com/package/discord.js-captcha)
 
@@ -67,10 +67,9 @@ client.login("Discord Bot Token");
 const { Captcha } = require("discord.js-captcha");
 
 const captcha = new Captcha(client, {
-    roleID: "Role ID Here", //optional
+    roleID: "Role ID Here", //optional. if provided, the role will be added on success
     channelID: "Text Channel ID Here", //optional
     sendToTextChannel: false, //optional, defaults to false
-    addRoleOnSuccess: true, //optional, defaults to true. whether you want the bot to add the role to the user if the captcha is solved
     kickOnFailure: true, //optional, defaults to true. whether you want the bot to kick the user if the captcha is failed
     caseSensitive: true, //optional, defaults to true. whether you want the captcha responses to be case-sensitive
     attempts: 3, //optional, defaults to 1. number of attempts before captcha is considered to be failed
@@ -164,13 +163,13 @@ captcha.on("success", data => {
 # What do the CAPTCHAs look like?
 Below is an image of what answering a CAPTCHA will look like when using the default settings:
 
-![Image of Captcha](https://github.com/WillTDA/Discord.js-Captcha/blob/master/src/images/captchaExample.jpg?raw=true)
+![Image of Captcha](https://github.com/diamonddigitaldev/Discord.js-Captcha/blob/master/src/images/captchaExample.jpg?raw=true)
 
 ## Contact Me
 
-- 👋 Need Help? [Join Our Discord Server](https://discord.gg/P2g24jp)!
+- 👋 Need Help? [Join Our Discord Server](https://diamonddigital.dev/discord)!
 
-- 👾 Found a Bug? [Open an Issue](https://github.com/WillTDA/Discord.js-Captcha/issues), or Fork and [Submit a Pull Request](https://github.com/WillTDA/Discord.js-Captcha/pulls) on our [GitHub Repository](https://github.com/WillTDA/Discord.js-Captcha)!
+- 👾 Found a Bug? [Open an Issue](https://github.com/diamonddigitaldev/Discord.js-Captcha/issues), or Fork and [Submit a Pull Request](https://github.com/diamonddigitaldev/Discord.js-Captcha/pulls) on our [GitHub Repository](https://github.com/diamonddigitaldev/Discord.js-Captcha)!
 <hr>
 <center>
 <a href="https://diamonddigital.dev/"><strong>Created and maintained by</strong>
